@@ -5,8 +5,8 @@ export default function Home() {
   return (
     <>
     <LinkButton name="Signup" href="./signup" />
-    <a className="ml-5">Login</a>
-    <a className="ml-5">News</a>
+    <LinkButton name="Login" href="./login" />
+    <LinkButton name="News" href="./news" />
     </>
   );
 }
