@@ -1,9 +1,10 @@
 import Image from "next/image";
+import LinkButton from "./components/link_button";
 
 export default function Home() {
   return (
     <>
-    <a className="mr-5">Signup</a>
+    <LinkButton name="Signup" href="./signup" />
     <a className="ml-5">Login</a>
     <a className="ml-5">News</a>
     </>
