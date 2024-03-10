@@ -28,6 +28,8 @@ function Form({ button_text, input_data_arr }: FormProps) {
   
     const handleSubmit = (event: FormEvent) => {
       event.preventDefault();
+      const formDataString = JSON.stringify(formData);
+      localStorage.setItem( 'formData' , formDataString);
       console.log('Form submitted with data:', Object.entries(formData));
     };
   
