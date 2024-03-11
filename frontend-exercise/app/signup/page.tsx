@@ -1,7 +1,8 @@
 'use client'
 
 import React from 'react'
-import Form from '../components/form'; 
+import Form from '../components/form';
+import Cookie from 'js-cookie';
 
 const Signup = () => {
   const inputData = [
@@ -13,13 +14,13 @@ const Signup = () => {
   const getData = () => {
     try {
       
-      const Data = localStorage.getItem('formData');
+      const Data = Cookie.get('formData');
 
-      if( Data !== null ){  
+      if( Data !== undefined ){
       
       const formData = JSON.parse(Data);
 
-      console.log('Data from localStorage:', formData);
+      console.log('Data from cookie:', formData);
       
       }else{
         console.log('No items');

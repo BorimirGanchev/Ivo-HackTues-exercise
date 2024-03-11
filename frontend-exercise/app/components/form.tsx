@@ -1,5 +1,6 @@
 'use client'
 import React, { useState, ChangeEvent, FormEvent } from 'react';
+import Cookie from 'js-cookie'
 
 interface InputData {
   label: string;
@@ -29,7 +30,7 @@ function Form({ button_text, input_data_arr }: FormProps) {
     const handleSubmit = (event: FormEvent) => {
       event.preventDefault();
       const formDataString = JSON.stringify(formData);
-      localStorage.setItem( 'formData' , formDataString);
+      Cookie.set('formData', formDataString)
       console.log('Form submitted with data:', Object.entries(formData));
     };
   
